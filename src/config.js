@@ -59,10 +59,10 @@ export default {
     },
   ],
   metaData: {
-    authorName: "Bob",
-    summary: "My personal blog",
+    authorName: "Koperasi Delapan Lima",
+    summary: "Website for Koperasi Delapan Lima",
     category: "Blog",
-    keywords: ["Blog", "Astro"],
+    keywords: ["Blog", "Astro", "Landing Page", "Koperasi"],
     icon: "favicon.ico",
   },
 };
