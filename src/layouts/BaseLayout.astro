@@ -3,6 +3,7 @@ import BaseHead from "./BaseHead.astro";
 import NavListItem from "@components/NavListItem.astro";
 import pageSize from "src/config.js";
 import config from "src/config.js";
+import { capitalizeString } from "src/misc";
 export interface Props {
   title: string,
   description?: string,
@@ -11,7 +12,7 @@ export interface Props {
 
 const { title, description = "My blog", activeLink = null } = Astro.props as Props;
 const { navLinks } = pageSize;
-const { metaData: { authorName } } = config;
+const { metaData: { authorName }, social } = config;
 ---
 
 <html lang="en">
@@ -94,8 +95,15 @@ const { metaData: { authorName } } = config;
 
     <footer class="border-t px-4 py-6 mt-6">
       <p class="text-center text-sm">&copy; {new Date().getFullYear()} {authorName}</p>
-      <p class="text-center text-xs">Built with <a class="text-cyan-600 hover:text-black dark:hover:text-white"
-          href="https://astro.build" target="_blank" rel="noreferrer noopener">{Astro.generator}</a></p>
+      <!-- <p class="text-center text-xs">Built with <a class="text-cyan-600 hover:text-black dark:hover:text-white"
+          href="https://astro.build" target="_blank" rel="noreferrer noopener">{Astro.generator}</a></p> -->
+      <div class="flex flex-wrap justify-center gap-5 mt-4">
+        {social.map(ele => <a class="w-8 h-8 flex scale-1 hover:scale-125 transition-[scale] justify-center" href={ele.link}
+          target="_blank" rel="noreferrer noopener">
+          <span class="sr-only">{`Link to my ${ele.sr?? capitalizeString(ele.link.replace(/.+\/\/|www.|\..+/g, ''))} account`}</span>
+          <Fragment set:html={ele.svg} />
+        </a> )}
+      </div>
     </footer>
   </body>
 

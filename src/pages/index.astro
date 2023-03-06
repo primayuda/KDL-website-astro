@@ -15,18 +15,19 @@ const { metaData: { authorName }, social } = config;
 		<div class="hero min-h-screen bg-center bg-cover" style="background-image: url(/images/DJI_0550_v1.JPG);">
 			<div class="hero-overlay bg-opacity-60"></div>
 			<div class="hero-content text-center text-neutral-content">
-				<div class="w-full">
+				<div class="w-md flex flex-col items-center">
+					<img width="200" height="200" src="images/LogoKDL.png" alt="avatar" />
 					<h1
 				class="text-center bg-gradient-to-r from-blue-800 to-yellow-400 bg-clip-text text-transparent text-5xl mb-[0.7em]">
 				<span class="font-bold">{authorName}</span></h1>
-					<p class="mb-5">Silaturahmi antar jurusan ITB angkatan 85.</p>
-					<button class="btn btn-primary">Get Started</button>
+					<p class="mb-5">Forum pertukaran informasi dan silaturahmi antara alumni ITB angkatan 85 dan juga dengan alumni ITB lainnya. Kami berpartisipasi dalam acara yang diselenggarakan oleh anggota, melaksanakan kegiatan sosial serta mengelola kegiatan usaha untuk menyalurkan kompetensi wirausaha dari anggota..</p>
+					<button class="btn btn-primary">Daftar</button>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<section class="flex flex-col sm:flex-row justify-center max-w-[90%] w-[52rem] mx-auto gap-12 mb-48">
+	<!-- <section class="flex flex-col sm:flex-row justify-center max-w-[90%] w-[52rem] mx-auto gap-12 mb-48">
 		<img width="200" height="200" src="images/LogoKDL.png" alt="avatar"
 			class="rounded-md h-fit self-center justify-self-center">
 		<div class="flex flex-col flex-wrap flex-grow">
@@ -46,13 +47,36 @@ const { metaData: { authorName }, social } = config;
 				</a> )}
 			</div>
 		</div>
-	</section>
+	</section> -->
 
+	<section class="flex justify-center my-10">
+		<div class="stats stats-vertical lg:stats-horizontal shadow text-center">
+  
+			<div class="stat">
+				<div class="stat-title">Anggota Total</div>
+				<div class="stat-value">255</div>
+				<div class="stat-desc">2015 - Feb 2023</div>
+			</div>
+			
+			<div class="stat">
+				<div class="stat-title">Jurusan</div>
+				<div class="stat-value">13</div>
+				<!-- <div class="stat-desc">↗︎ 400 (22%)</div> -->
+			</div>
+			
+			<div class="stat">
+				<div class="stat-title">Anggota Baru</div>
+				<div class="stat-value">5</div>
+				<div class="stat-desc">2023</div>
+			</div>
+			
+		</div>
+	</section>
 
 	<section>
 		<h2
-			class="mx-auto text-center mb-8 bg-gradient-orange text-transparent bg-clip-text text-4xl border-b-2 border-red-300 font-semibold w-fit">
-			Featured Articles
+			class="mx-auto text-center my-8 bg-gradient-to-r from-blue-800 to-yellow-500 text-transparent bg-clip-text text-4xl border-b-2 border-red-300 font-semibold w-fit">
+			Berita KDL
 		</h2>
 
 		<div class="flex flex-wrap flex-col justify-center gap-12">
