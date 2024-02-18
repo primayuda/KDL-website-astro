@@ -1,8 +1,8 @@
-# Astro Bob's blog
+# Website Koperasi Delapan Lima
 
-A responsive, personal blog template, built with Astro and Tailwind CSS.
+Static built with Astro and Tailwind CSS.
 
-
+![Image of website](/images/WebsiteScreenShot.png)
 
 ## Features
 
