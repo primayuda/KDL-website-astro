@@ -2,7 +2,7 @@
 
 Static built with Astro and Tailwind CSS.
 
-![Image of website](/images/WebsiteScreenShot.png)
+![Image of website](/public/images/WebsiteScreenShot.png)
 
 ## Features
 
