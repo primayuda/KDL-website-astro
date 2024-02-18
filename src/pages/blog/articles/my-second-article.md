@@ -2,10 +2,11 @@
 layout: "@layouts/ArticleLayout.astro"
 title: My Second Article
 date: 14 July 2022
-image: https://api.lorem.space/image/drink?w=400&h=225
+image: "https://api.lorem.space/image/drink?w=400&h=225"
 tags:
   - second
   - featured
+draft: true
 ---
 
 ```javascript

@@ -6,6 +6,7 @@ image: /images/my-third-article/cardimage.jpg
 tags:
   - third
   - featured
+draft: true
 ---
 
 ```javascript
