@@ -34,7 +34,7 @@ export async function getStaticPaths({ paginate }) {
 
 const { page } = Astro.props;
 
-const { tag } = Astro.params;
+const { tag } = Astro.params as { tag: string };
 ---
 
 <BaseLayout title={`#${tag}`}>
