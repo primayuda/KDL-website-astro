@@ -9,6 +9,7 @@ import netlify from '@astrojs/netlify';
 // https://astro.build/config
 export default defineConfig({
   adapter: netlify(),
+  output: "server",
   integrations: [tailwind(), sitemap()],
   site: "https://kdl.or.id",
   base: "/",
