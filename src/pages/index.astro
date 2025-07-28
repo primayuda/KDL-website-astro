@@ -1,11 +1,19 @@
 ---
 import ArticleCard from "@components/ArticleCard.astro";
 import BaseLayout from "@layouts/BaseLayout.astro";
+import { MarkdownInstance } from "astro/dist/types/public";
 import config from "src/config";
 import { Frontmatter, sortDateDescending, capitalizeString } from "src/misc";
 
-const allPosts = await Astro.glob<Frontmatter>('../pages/blog/articles/*.md');
-const posts = sortDateDescending(allPosts.filter((post) => post.frontmatter.draft != true && post.frontmatter.tags.includes('featured'))).slice(0, 3);
+const postModules = import.meta.glob<MarkdownInstance<Frontmatter>>('../pages/blog/articles/*.md', { eager: true });
+
+const allPosts = Object.values(postModules);
+
+const posts = sortDateDescending(
+  allPosts
+    .filter((post) => !post.frontmatter.draft && post.frontmatter.tags.includes('featured'))
+).slice(0, 3);
+
 const { metaData: { authorName }, social } = config;
 ---
 
@@ -22,8 +30,8 @@ const { metaData: { authorName }, social } = config;
 				<span class="font-bold">{authorName}</span></h1>
 					<p class="mb-5">Forum pertukaran informasi dan silaturahmi antara alumni ITB angkatan 85 dan juga dengan alumni ITB lainnya. Kami berpartisipasi dalam acara yang diselenggarakan oleh anggota, melaksanakan kegiatan sosial serta mengelola kegiatan usaha untuk menyalurkan kompetensi wirausaha dari anggota..</p>
 					<a role="button" class="btn btn-primary my-5" href="https://form.jotform.me/91323117768459">Daftar KDL</a>
-					<p class="my-5">Silakan daftar Rapat Anggota Tahunan 2024</p>
-					<a id="rat2024" role="button" class="btn btn-success" href="https://tally.so/r/npBL6b">Daftar RAT 2024</a>
+					<p class="mt-35">Silakan daftar Rapat Anggota Tahunan 2025</p>
+					<a id="rat2025" role="button" class="btn btn-success mt-5" href="/RAT2025/">Daftar RAT 2025</a>
 				</div>
 			</div>
 		</div>

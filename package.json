@@ -10,16 +10,16 @@
   },
   "devDependencies": {
     "@astrojs/sitemap": "^0.3.0",
-    "@astrojs/tailwind": "^0.2.4",
+    "@astrojs/tailwind": "^6.0.2",
     "@tailwindcss/line-clamp": "^0.4.0",
     "@tailwindcss/typography": "^0.5.4",
     "astro": "^5.12.3",
-    "autoprefixer": "^10.4.7",
+    "autoprefixer": "^10.4.21",
     "daisyui": "^2.19.0",
     "node-html-parser": "^5.3.3",
     "postcss": "^8.4.31",
     "reading-time": "^1.5.0",
-    "tailwindcss": "^3.1.6",
+    "tailwindcss": "^3.4.17",
     "theme-change": "^2.1.0"
   },
   "dependencies": {
