@@ -13,7 +13,7 @@
     "@astrojs/tailwind": "^6.0.2",
     "@tailwindcss/line-clamp": "^0.4.0",
     "@tailwindcss/typography": "^0.5.4",
-    "astro": "^5.12.3",
+    "astro": "^5.13.2",
     "autoprefixer": "^10.4.21",
     "daisyui": "^2.19.0",
     "node-html-parser": "^5.3.3",
