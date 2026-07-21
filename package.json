@@ -23,7 +23,7 @@
     "theme-change": "^2.1.0"
   },
   "dependencies": {
-    "@astrojs/netlify": "^7.0.13",
+    "@astrojs/netlify": "^8.1.2",
     "fuse.js": "^6.6.2"
   }
 }
